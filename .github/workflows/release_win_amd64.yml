@@ -62,9 +62,4 @@ jobs:
           name: WindowsRelease_${{ matrix.architecture }}_py${{ matrix.python-version }}
           path: dist
 
-      - name: Publish package
-        run: |
-          python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PADDLE2ONNX_API_TOKEN }}
+      
